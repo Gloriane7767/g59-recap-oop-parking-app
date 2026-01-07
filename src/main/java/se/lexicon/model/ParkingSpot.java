@@ -4,11 +4,13 @@ public class ParkingSpot {
 
     private Integer id;
     private Integer areaCode;
+    private Integer spotNumber;
     private boolean occupied;
 
-    public ParkingSpot(Integer id, Integer areaCode) {
+    public ParkingSpot(Integer id, Integer areaCode, Integer spotNumber) {
         this.id = id;
         this.areaCode = areaCode;
+        this.spotNumber = spotNumber;
     }
 
     public Integer getId() {
@@ -17,6 +19,10 @@ public class ParkingSpot {
 
     public Integer getAreaCode() {
         return areaCode;
+    }
+
+    public Integer getSpotNumber() {
+        return spotNumber;
     }
 
     public boolean isOccupied() {
@@ -43,7 +49,9 @@ public class ParkingSpot {
         return "ParkingSpot{" +
                 "id=" + id +
                 ", areaCode=" + areaCode +
+                ", spotNumber=" + spotNumber +
                 ", occupied=" + occupied +
                 '}';
     }
+
 }

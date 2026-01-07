@@ -4,7 +4,10 @@ import se.lexicon.dao.CustomerDao;
 import se.lexicon.model.Customer;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.Optional;
+
 
 public class CustomerDaoImpl implements CustomerDao {
     private List<Customer> customers = new ArrayList<>();
@@ -15,14 +18,14 @@ public class CustomerDaoImpl implements CustomerDao {
     }
 
     @Override
-    public java.util.Optional<Customer> findById(Integer id) {
+    public Optional<Customer> findById(Integer id) {
         return customers.stream()
                 .filter(customer -> customer.getId().equals(id))
                 .findFirst();
     }
 
     @Override
-    public java.util.Collection<Customer> findAll() {
+    public Collection<Customer> findAll() {
         return new ArrayList<>(customers);
     }
 
