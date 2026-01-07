@@ -11,3 +11,4 @@ public interface CustomerDao {
     Collection<Customer> findAll();
     void remove(Integer id);
 }
+
