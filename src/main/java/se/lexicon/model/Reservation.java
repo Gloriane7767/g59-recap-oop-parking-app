@@ -13,15 +13,14 @@ public class Reservation {
     private Customer customer;
     private ParkingSpot parkingSpot;
 
-    public Reservation(ParkingSpot parkingSpot, Customer customer, int hours){
-        this.reservationId = "RES-" + (new Random().nextInt(900000) + 1000000);
-        this.startTime = LocalDateTime.now();
-        serDurationInHours(hours);
-        this.parkingSpot = Objects.requireNonNull(parkingSpot, "Parking spot cannot be null");
-        this.customer = Objects.requireNonNull(customer, "Customer cannot be null");
-        this.status = Status.ACTIVE;
-        this.parkingSpot.occupy();
+    public Reservation(ParkingSpot parkingSpot, Customer customer, int hours) {
+
     }
+
+    private void setDurationInHours(int hours) {
+    }
+
+
     /*
     VWhy is this.parkingSpot.occupy(); inside the constructor?
 To understand this, imagine a real-world parking lot.

@@ -12,7 +12,7 @@ public class Main {
     void main() {
         List<ParkingSpot> parkingSpots = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            parkingSpots.add(new ParkingSpot(i, 101));
+            parkingSpots.add(new ParkingSpot(i, 101, i));
         }
 
         // Display all spots in Area 101 like a real parking place with lines
